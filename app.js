@@ -12,24 +12,19 @@ const createChart = async function () {
     <h1 class="spending-text">Spending - Last 7 days</h1>
 
     <div class="spending-chart-box">
-    
-    ${data
-      .map(
-        (data) => `
-          <div class="spending-chart">
-            <button class="spending-perc-table ${
-              data.day === day ? "cyan-bg" : ""
-            }" style="height: ${((data.amount * 100) / 227.94) * 5}px;">
-
-                  <span class="spending-table-amount">$${data.amount}</span>
-                  </button>
-                  
-                  
-                  <p class="spending-day">${data.day}</p>
-                  </div>
+      ${data
+        .map(
+          (data) => `
+            <div class="spending-chart">
+              <button class="spending-perc-table">
+                <span class="spending-table-amount">$${data.amount}</span>
+              </button>
+              <p class="spending-day">${data.day}</p>
+            </div>
             `
-      )
-      .join("")}
+        )
+        .join("")}
+    
     </div>
 
     <div class="spending-info">
@@ -48,6 +43,16 @@ const createChart = async function () {
 `;
 
   container.insertAdjacentHTML("beforeend", markup);
+
+  const spendingTable = document.querySelectorAll(".spending-perc-table");
+
+  spendingTable.forEach((table, i) => {
+    table.style.height = `${((data[i].amount * 100) / 297.47) * 10}px `;
+    console.log(day === data[i].day);
+    table.style.backgroundColor = ` ${
+      day === data[i].day ? "hsl(186, 34%, 60%)" : ""
+    }`;
+  });
 };
 
 createChart();
