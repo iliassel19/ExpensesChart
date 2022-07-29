@@ -21,13 +21,13 @@ const createChart = async function () {
               data.day === day ? "cyan-bg" : ""
             }" style="height: ${((data.amount * 100) / 227.94) * 5}px;">
 
-            <span class="spending-table-amount">$${data.amount}</span>
-            </button>
-
-
-      <p class="spending-day">${data.day}</p>
-      </div>
-      `
+                  <span class="spending-table-amount">$${data.amount}</span>
+                  </button>
+                  
+                  
+                  <p class="spending-day">${data.day}</p>
+                  </div>
+            `
       )
       .join("")}
     </div>
@@ -36,7 +36,7 @@ const createChart = async function () {
       <div class="spending-info-text">
         <p class="spending-total">Total this month</p>
 
-        <h3 class="spending-total-amount">$478.33</h3>
+        <h2 class="spending-total-amount">$478.33</h2>
       </div>
 
       <div class="spending-lastm-info">
