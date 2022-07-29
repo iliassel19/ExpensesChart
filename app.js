@@ -21,7 +21,7 @@ const createChart = async function () {
               data.day === day ? "cyan-bg" : ""
             }" style="height: ${((data.amount * 100) / 227.94) * 5}px;">
 
-            <p class="spending-table-amount">$${data.amount}</p>
+            <span class="spending-table-amount">$${data.amount}</span>
             </button>
 
 
