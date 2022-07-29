@@ -16,8 +16,7 @@ const createChart = async function () {
         .map(
           (data) => `
             <div class="spending-chart">
-              <button class="spending-perc-table">
-              </button>
+              <button class="spending-perc-table"></button>
               <p class="spending-table-amount">$${data.amount}</p>
               <p class="spending-day">${data.day}</p>
             </div>
