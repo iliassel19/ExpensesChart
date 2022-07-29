@@ -92,22 +92,21 @@ body {
   align-items: flex-start;
 }
 .spending-perc-table:hover {
-  background-color: hsl(0, 100%, 84%);
+  opacity: 0.4;
 }
 .spending-table-amount {
-  transform: translate(-0.2rem, -3.2rem);
+  position: absolute;
+  transform: translateY(-3rem);
   font-size: 1.4rem;
   color: var(--color-low-brown);
   background-color: var(--color-dark-brown);
   padding: 0.4rem 0.8rem;
   border-radius: 0.3rem;
-  opacity: 0.4;
-  visibility: hidden;
+  opacity: 0;
   transition: all 0.2s;
 }
-.spending-perc-table:hover .spending-table-amount {
+.spending-perc-table:hover ~ .spending-table-amount {
   opacity: 1;
-  visibility: visible;
 }
 
 .spending-info {
@@ -132,13 +131,6 @@ body {
 .spending-lastm-text {
   font-size: 1.2rem;
   color: var(--color-medium-brown);
-}
-
-.cyan-bg {
-  background-color: hsl(186, 34%, 60%);
-}
-.cyan-bg:hover {
-  background-color: rgb(169, 231, 238);
 }
 
 .attribution {
@@ -184,7 +176,6 @@ body {
     font-size: 2rem;
   }
   .spending-table-amount {
-    transform: translate(-1rem, -3.2rem);
   }
 
   .attribution {
