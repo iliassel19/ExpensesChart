@@ -78,7 +78,6 @@ body {
   color: var(--color-medium-brown);
 }
 .spending-perc-table {
-  border: none;
   cursor: pointer;
   border-radius: 0.3rem;
   width: 100%;
