@@ -17,8 +17,8 @@ const createChart = async function () {
           (data) => `
             <div class="spending-chart">
               <button class="spending-perc-table">
-                <span class="spending-table-amount">$${data.amount}</span>
               </button>
+              <p class="spending-table-amount">$${data.amount}</p>
               <p class="spending-day">${data.day}</p>
             </div>
             `
